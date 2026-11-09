@@ -32,10 +32,11 @@ mv themes/hugo-theme-gallery-* themes/gallery
 # Gallery instructions
 echo "theme = 'gallery'" >> hugo.toml
 sed -i "s/My New Hugo Project/Hazel Blog/" hugo.toml
+printf "\n[[menus.main]]\nname = 'Hugo'\nurl = 'https://gohugo.io/'\n" >> hugo.toml
 cp -r /home/hazel/memes /home/hazel/animals content/
 echo '{"title":"Memes"}' > content/memes/index.md
 echo '{"title":"Animals"}' > content/animals/index.md
-
+echo '{"title":"Hazel Blog","description":"I built this blog with <a href=\"https://gohugo.io/\">Hugo</a> and Apache using a bash script. Scripting is more fun than coding."}' > content/_index.md
 # If blog entries are required:
 echo '{"title":"Entry One","menus":"main"}' > content/post1.md
 echo 'I built this blog with Hugo and Apache using a bash script. Scripting is more fun than coding.' >> content/post1.md
