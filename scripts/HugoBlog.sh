@@ -32,7 +32,7 @@ mv themes/hugo-theme-gallery-* themes/gallery
 # Gallery instructions
 echo "theme = 'gallery'" >> hugo.toml
 sed -i "s/My New Hugo Project/Hazel Blog/" hugo.toml
-printf "\n[[menus.main]]\nname = 'Hugo'\nurl = 'https://gohugo.io/'\n" >> hugo.toml
+echo "\n[[menus.main]]\nname = 'Hugo'\nurl = 'https://gohugo.io/'\n" >> hugo.toml
 cp -r /home/hazel/memes /home/hazel/animals content/
 echo '{"title":"Memes"}' > content/memes/index.md
 echo '{"title":"Animals"}' > content/animals/index.md
